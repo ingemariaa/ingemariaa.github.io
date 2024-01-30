@@ -99,11 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const title3 = document.querySelector('.title3');
             title3.classList.toggle('hidden');
+            
+            const closeButton = document.querySelector('.close-button');
+            closeButton.classList.toggle('hidden');
         }
 
         // Toggle close button visibility
-        const closeButton = document.querySelector('.close-button');
-        closeButton.classList.toggle('hidden');
+    
     }
 
     elements.forEach(element => {
