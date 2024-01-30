@@ -1,0 +1,335 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #72615b;
+  height: 100%;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+.image-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 3%;
+  cursor: url('/Content/Cursor2.png');
+}
+
+.image-container img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40vw;
+  max-height: 35vw;
+ 
+}
+
+
+
+.image-container video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 35vw;
+  max-width: 45vw;  
+}
+
+.image-container img.enlarged,
+.image-container video.enlarged {
+    /* Your styles for the enlarged state here */
+    position: absolute;
+    max-width: 90vw; /* Adjust to your preferred width */
+    max-height: 90vh; /* Adjust to your preferred height */
+    z-index: 9999;
+    top: 42%;
+}
+
+
+
+.title{
+  --gap: 100%;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  position: absolute;
+height: 20%;
+width: 33%;
+top: 0%;
+left: 0%;
+white-space: nowrap;
+
+}
+
+.title h1{
+  font-size: 7vw;
+  font-family: 'ABCDIA';
+  color: white;
+  width: 100%;
+  height: 20%;
+  margin: 0; 
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 10s linear infinite;
+  }
+
+.title2{
+  --gap: 100%;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  position: absolute;
+height: 20%;
+width: 33%;
+top: 0%;
+left: 33%;
+white-space: nowrap;
+}
+
+.title2 h1{
+  font-size: 7vw;
+  font-family: 'ABCDIA';
+  color: white;
+  width: 100%;
+  height: 20%;
+  margin: 0; 
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 12s linear infinite;
+  }
+
+
+.title3{
+  --gap: 100%;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  position: absolute;
+height: 20%;
+width: 33%;
+top: 0%;
+left: 66%;
+white-space: nowrap;
+}
+
+.title3 h1{
+  font-size: 7vw;
+  font-family: 'ABCDIA';
+  color: white;
+  width: 100%;
+  margin: 0; 
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 15s linear infinite;
+  }
+
+
+
+
+ 
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+
+
+  .arrow{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    }
+    
+    .arrow img{
+      width: 10%;
+      }
+
+
+
+
+
+.borders{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 96%;
+  font-size: 20px;
+  font-family: 'ABCDIA';
+  color: white;
+  background-color: transparent;
+  cursor:pointer;
+  border: transparent;
+  }
+
+  .return{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 96%;
+    font-size: 20px;
+    font-family: 'ABCDIA';
+    color: white;
+    background-color: transparent;
+    cursor:pointer;
+    border: transparent;
+    }
+
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4e31e1; /* Semi-transparent background */
+    z-index: 200;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-content h1{
+  line-height: 1ch;
+  position: absolute;
+  font-size: 4.3rem;
+  font-family: 'ABCDIA';
+  color:#668970;
+}
+
+.overlay-content h2{
+  top: 27%;
+  left: 15%;
+  line-height: 2.4vw;
+  width: 70%;
+  position: absolute;
+  font-size: 2.2vw;
+  font-family: 'ABCDIA';
+  color:#2d3034;
+}
+
+.links{
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  left: 15%;
+  font-size: 1.5rem;
+  font-family: 'ABCDIA';
+  color:#2d3034;
+}
+
+
+@font-face {
+  font-family: 'ABCDIA';
+  src: url('/ABCDiatype-Bold-Trial.woff') format('woff');
+  src: url('/ABCDiatype-Bold-Trial.woff2') format('woff2');
+  /* Add additional formats if needed */
+}
+
+a {
+
+  color:#2d3034;
+}
+
+.hidden {
+  /* Your styles for hidden elements here */
+  display: none !important;
+}
+
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 96%;
+  font-size: 20px;
+  font-family: 'ABCDIA';
+  color: white;
+  background-color: transparent;
+  cursor:pointer;
+  border: transparent;
+  }
+
+/* Style for the hidden close button */
+.close-button.hidden {
+  display: none;
+}
+
+
+
+@media (max-width: 850px) {
+
+  .image-container img{
+  max-width: 100vw;
+    max-height: 100vw;
+  }
+
+  .image-container video{
+    max-width: 100vw;
+    max-height: 100vw;
+  }
+
+  .title3{
+    display: none;
+    
+  }
+
+  .title2{
+    width: 50%;
+    left: 50%;
+  }
+  .title2 h1{
+    --gap: 100%;
+    width: 100%;
+    left: 50%;
+    font-size: 11vw;
+  }
+
+  .title{
+    width: 50%; 
+  }
+  .title h1{
+    --gap: 100%;
+    width: 100%;
+    left: 50%;
+    font-size: 11vw;
+  }
+  
+  
+
+  .overlay-content h1{
+    line-height: 2rem;
+    font-size: 2rem;
+  }
+
+  .overlay-content h2{
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+}
+

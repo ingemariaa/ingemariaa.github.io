@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "ABCDiatype-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-display: auto;
+  src: url("/ABCDiatype-Bold-Trial.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ABCRepro-MediumItalic";
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+  src: url("ABCRepro-MediumItalic-Trial.woff");
+  src: url("../fonts/ABCRepro-MediumItalic-Trial.woff") format("woff"), url("../fonts/ABCRepro-MediumItalic-Trial.woff2") format("woff2");
+}
